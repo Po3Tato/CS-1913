@@ -17,7 +17,7 @@ class Person:
 			raise ValueError('Invalid age')
 			
 		if not(type(name) is str and len(name) > 0):
-			raise ValueError('Invalid name')
+			raise ValueError('"'+name+'" is an invalid name')
 			
 		self.__name = name
 		self.__age = age
@@ -31,7 +31,35 @@ class Person:
 
 p = Person(5, 'billy smith')
 print(p.getName(), p.getAge())
-print(p.__name, p.__age)
+#print(p.__name, p.__age)
 
-q = Person(-85, '')
-v = Person(1, '')
+#q = Person(-85, '')
+#v = Person(1, '')
+
+# handling exceptions
+try:
+	p2 = Person(5, '')
+except ValueError as e:
+	print('error found, message = ', e)
+except:
+	print('wont get here!')
+finally:
+	print('an error may have occured, but do this anyway')
+	
+# pass is literaly an empty statement (space filler?)
+
+# optional arguments:
+def customAdd(a, *others):
+	sum = a
+	for i in others:
+		sum += i
+	return sum
+
+print('custom add ex. ', customAdd(1,2,3,4,5))
+
+# inheritance:
+# 
+	
+	
+	
+	

@@ -32,7 +32,7 @@ def solving(var, expr):
 	return solving(var, expr)
 	
 # we will generate our solving(Add|Subtract...) functions here. Sorry for the 
-# inelegance, I would normally have done this as a set of anonymous function, 
+# inelegance, I would normally have done this as a set of anonymous functions, 
 # but it said that solvingAdd, solvingSubtract... functions "must" be defined in the file, not 
 # just as entries of a dictionary or something
 
