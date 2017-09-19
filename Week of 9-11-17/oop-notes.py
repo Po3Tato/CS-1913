@@ -58,8 +58,33 @@ def customAdd(a, *others):
 print('custom add ex. ', customAdd(1,2,3,4,5))
 
 # inheritance:
-# 
-	
+# single inheritance vs multiple inheritance (e.g. combining multiple classes together)
+# the following is single inheritance
+class Wizard(Person):
+	def __init__(self, age, name, wand):
+		Person.__init__(self, age, name)
+		self.__wand = wand
+		
+	def getWand(self):
+		return self.__wand
+		
+w = Wizard(5, "bob", "ebony")
+print(w.getName(), w.getAge(), w.getWand())
+
+class Muggle(Person):
+	def __init__(self, age, name, salary):
+		Person.__init__(self, age, name)
+		self.__salary = salary
+	def getSalary(self):
+		return self.__salary
+		
+m = Muggle(12, "James", 120)
+print(m.getName(), m.getAge(), m.getSalary())
+
+# multiple inheritance
+# class A(B, C, D...)
+# order matters! A(B, C) searches the functions of B BEFORE the methods of C in 
+#	inherited functions
 	
 	
 	
